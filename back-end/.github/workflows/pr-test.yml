@@ -1,13 +1,15 @@
 ﻿name: PullRequest
 on: [pull_request]
+defaults:
+  run:
+    working-directory: back-end
 jobs:
   PullRequest:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 1
+
       - name: Make envfile
         uses: SpicyPizza/create-envfile@v1
         with:
