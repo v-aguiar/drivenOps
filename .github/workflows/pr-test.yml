@@ -1,8 +1,7 @@
 ﻿name: PullRequest
-on: [pull_request]
-defaults:
-  run:
-    working-directory: back-end
+
+on: [pull]
+
 jobs:
   PullRequest:
     runs-on: ubuntu-latest
@@ -17,7 +16,7 @@ jobs:
           envkey_POSTGRES_PASSWORD: "postgres"
           envkey_POSTGRES_DB: "drivenOps_db__test"
           envkey_DATABASE_URL: "postgres://postgres:postgres@drivenOps_db:5432/drivenOps_db__test"
-          file_name: .env.test
+          file_name: back-end/.env.test
       - name: Run tests
         run: docker-compose -f docker-compose.test.yml run node_app npm run test
       - name: Build
