@@ -1,5 +1,4 @@
-﻿version: "3"
-services:
+﻿services:
   drivenOps_db:
     image: postgres
     container_name: drivenOps_db
@@ -38,7 +37,6 @@ services:
       - drivenOps_db
       - node_app
       - react_app
-
 
 volumes:
   pg:
