@@ -1,4 +1,5 @@
-﻿import { useEffect, useState } from "react";
+﻿import axios from "axios";
+import { useEffect, useState } from "react";
 
 export const Students = () => {
   const [students, setStudents] = useState([]);
