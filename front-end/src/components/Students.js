@@ -21,7 +21,7 @@ export const Students = () => {
     };
 
     getStudents();
-  });
+  }, []);
   return (
     <ul>
       {students
